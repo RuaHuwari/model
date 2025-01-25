@@ -9,10 +9,6 @@ class CareerPathRecommender:
     def __init__(self):
         # Retrieve the API key from environment variables
         api_key ="2bed259f2fe76411de96e9f529ef58768217ef0da0b97853236dd66ac8466aeb"
-        if not api_key:
-            raise ValueError("API key must be set in the environment variables or .env file.")
-
-        # Initialize the Together API client with the API key
         self.client = Together(api_key=api_key)
 
     def get_recommendations(self, resume_data):
